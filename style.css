@@ -1,0 +1,39 @@
+h1 {
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.pwbox {
+    margin-top: 10px;
+    text-align: left;
+    padding: 20px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: bolder;
+   
+}
+
+input {
+    width: 465px;
+    height: 100px;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: small;
+    text-align: center;
+    border: 2px dashed darkgray;  
+}
+
+form {
+    text-align: center;
+    width: 200px; 
+}
+
+button {
+    text-align: center;
+    margin-left: 170px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+      
+}
+
+#rcorners2 {
+    border-radius: 25px;
+    border: 2px solid}
