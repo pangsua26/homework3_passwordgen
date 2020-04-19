@@ -42,13 +42,9 @@ function generatePassword() {
         let randomChar;
 
         randomCharArrayNum= parseInt(Math.floor(Math.random()*caseArray.length));
-
         selectedCharArray=caseArray[randomCharArrayNum];
-
         randomCharNum=Math.floor(Math.random()*selectedCharArray.length);
-
         randomChar=selectedCharArray[randomCharNum];
-
         passwordString+=randomChar;
     }
     passwordEntry.textContent=passwordString;  
