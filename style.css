@@ -13,7 +13,7 @@ h1 {
    
 }
 
-input {
+#passwordEntry {
     width: 465px;
     height: 100px;
     font-family: 'Courier New', Courier, monospace;
@@ -31,6 +31,7 @@ button {
     text-align: center;
     margin-left: 170px;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    padding-left: 20px;
       
 }
 
