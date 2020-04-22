@@ -10,7 +10,7 @@ function generatePassword() {
     var passwordString="";
 
     var passwordLength=parseInt(prompt("How many characters would you like your password to contain?"));
-    while(passwordLength < 8 || passwordLength > 128 || typeof(passwordLength) != "number" || passwordLength === NaN || passwordLength === null)
+    while(passwordLength < 8 || passwordLength > 128 || typeof(passwordLength) != "number" || passwordLength === NaN || passwordLength === null);
 
     var special=confirm("Click OK to confirm including special charaters.");
     var numeric=confirm("Click OK to confirm including numeric characters.");
@@ -18,40 +18,47 @@ function generatePassword() {
     var upperCase=confirm("Click OK to confirm including uppercase characters.");
     
 
+    if (special==true){
+        charArray.push(specialChar)
+
+    }
+    if (numeric==true){
+        charArray.push(numericChar)
+        
+    }
     if (lowerCase==true){
-        caseArray.push(lowerCaseChar);
+        charArray.push(lowerCaseChar);
     
     }
     if (upperCase==true){
-        caseArray.push(upperCaseChar)
+        charArray.push(upperCaseChar)
     
     }
-    if (numeric==true){
-        caseArray.push(numericChar)
-        
-    }
-    if (special==true){
-        caseArray.push(specialChar)
-    }
+    
 
-    for (var i=0;i<passwordLength;i++){
+    for(var i=0;i<passwordLength;i++){
 
         var randomCharArrayNum;
         var selectedCharArray;
         var randomCharNum;
         var randomChar;
+        
+        randomCharArrayNum= parseInt(Math.floor(Math.random()*charArray.length)); 
 
-        randomCharArrayNum= parseInt(Math.floor(Math.random()*caseArray.length));
-        selectedCharArray=caseArray[randomCharArrayNum];
+        selectedCharArray=charArray[randomCharArrayNum];
+
         randomCharNum=Math.floor(Math.random()*selectedCharArray.length);
+
         randomChar=selectedCharArray[randomCharNum];
+       
         passwordString+=randomChar;
+        
     }
-
-    passwordEntry.textContent=passwordString;  
-
+   
+    passwordEntry.textContent=passwordString;    
 }
+
 
 var generateButton=document.getElementById("generateButton");
 var passwordEntry=document.getElementById("passwordEntry");
-generateButton.onclick()= generatePassword;
+generateButton.onclick = generatePassword;
