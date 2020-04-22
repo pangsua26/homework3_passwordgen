@@ -10,7 +10,7 @@ function generatePassword() {
     var passwordString="";
 
     var passwordLength=parseInt(prompt("How many characters would you like your password to contain?"));
-    while(passwordLength < 8 || passwordLength > 128 || typeof(passwordLength) != "number" || passwordLength === NaN || passwordLength === null);
+    while(passwordLength < 8 || passwordLength > 128 || typeof(passwordLength) != "number" || passwordLength === NaN || passwordLength === null)
 
     var special=confirm("Click OK to confirm including special charaters.");
     var numeric=confirm("Click OK to confirm including numeric characters.");
@@ -34,12 +34,12 @@ function generatePassword() {
         caseArray.push(specialChar)
     }
 
-    for(let i=0;i<passwordLength;i++){
+    for (var i=0;i<passwordLength;i++){
 
-        let randomCharArrayNum;
-        let selectedCharArray;
-        let randomCharNum;
-        let randomChar;
+        var randomCharArrayNum;
+        var selectedCharArray;
+        var randomCharNum;
+        var randomChar;
 
         randomCharArrayNum= parseInt(Math.floor(Math.random()*caseArray.length));
         selectedCharArray=caseArray[randomCharArrayNum];
@@ -47,10 +47,11 @@ function generatePassword() {
         randomChar=selectedCharArray[randomCharNum];
         passwordString+=randomChar;
     }
+
     passwordEntry.textContent=passwordString;  
 
 }
 
 var generateButton=document.getElementById("generateButton");
 var passwordEntry=document.getElementById("passwordEntry");
-generateButton.onclick = generatePassword;
+generateButton.onclick()= generatePassword;
